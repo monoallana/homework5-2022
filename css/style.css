@@ -1,0 +1,149 @@
+/* Q1 */
+#logo{
+    animation-name: logo;
+    animation-duration: 5s;
+    animation-timing-function: ease-in;
+}
+@keyframes logo{
+    0% {opacity: 0; width: 25px;}
+    100% {opacity: 1; width: 475px;}
+}
+
+/* Q2 */
+body{
+    font-family: "Poppins", serif;
+    background-image: url("../images/concrete_seamless.png");
+    background-color: #f1f1f1;
+}
+
+/* Q3 */
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Q4 */
+.nav_links{
+    display: flex;
+    flex-direction: column;
+}
+
+/*Q5 Challenge */
+a:visited, a:link{
+    color: blue;
+}
+
+/* Q6 */
+.card > header{
+    background-color: #288088;
+    border: 2px solid #45ADAD;
+    padding: 20px 0 20px 0;
+    border-radius: 50px 50px 0 0;
+}
+
+/* Q7 */
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    border-radius: 50px 50px 0 0;
+}
+
+/* Q8 */
+.pricing{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Q9 */
+.gallery img{
+    border: 10px solid #50C7C7;
+    width: 300px;
+    margin: 10px;
+}
+
+/* Q10 */
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media screen and (min-width: 900px){
+    /* Q11 */
+    header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .nav_links{
+        display: flex;
+        flex-direction: row;
+    }
+
+    /* Q12 */
+    .pricing{
+        flex-direction: row;
+    }
+    .card{
+        width: 275px;
+    }
+
+    /* Q13 Challenge*/
+    body > header{
+        position: sticky;
+        top: 0;
+        width: 100%;
+    }
+}
+
+/* Q14 */
+@media screen and (prefers-reduced-motion: reduce){
+    #logo{
+        animation: none;
+    }
+  }
+
+@media print {
+    /* Q15, Q16 */
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        background-image: none;
+    }
+
+    /* Q17 */
+    nav{
+        width: 100%;
+    }
+    .nav_links{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    /* Q18 */
+    .pricing{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+    }
+
+    /* Q19 */
+    .card{
+        border: 2px solid #45ADDD;
+        flex-basis: 325px;
+    }
+
+    /* Q20 */
+    .gallery, #gallery{
+        display: none;
+    }
+
+    /* Q21 Challenge */
+    .card li:nth-child(2)::after{
+        content: "\01F44D";
+    }
+}
